@@ -262,7 +262,7 @@ header nav form i {
 }
 .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 60px 40px;
 }
 .services-content .box {
@@ -301,6 +301,14 @@ header nav form i {
   overflow: hidden;
   margin-top: 80px;
 }
+@media (max-width: 767px) {
+  .design img {
+    display: none;
+  }
+  .design .side-div {
+    width: 100%;
+  }
+}
 .design img {
   position: absolute;
   z-index: 3;
@@ -327,7 +335,7 @@ header nav form i {
   text-transform: uppercase;
   margin-bottom: 40px;
 }
-.design .side-div ul{
+.design .side-div ul {
   margin-left: 40px;
 }
 .design .side-div ul li {
@@ -341,4 +349,133 @@ header nav form i {
   position: absolute;
   left: -40px;
   top: 20%;
+}
+.portfolio {
+  margin-top: 100px;
+}
+.portfolio .container {
+  text-align: center;
+}
+.portfolio .container ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.portfolio .container ul li {
+  display: flex;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio .container ul li.active {
+  background-color: var(--main-color);
+  color: white;
+}
+.portfolio .photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  position: relative;
+}
+.portfolio .photo-container div {
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 976px) {
+  .portfolio .photo-container div {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1190px) {
+  .portfolio .photo-container div {
+    flex-basis: 25%;
+  }
+}
+.portfolio .photo-container img {
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  position: relative;
+}
+.portfolio .photo-container div .caption {
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+  padding: 20px;
+  background-color: white;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.portfolio .photo-container div .caption h3 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.portfolio .photo-container div .caption p {
+  color: var(--main-color);
+}
+.portfolio .photo-container div:hover img {
+  transform: rotate(2deg) scalex(1.1);
+  -webkit-transform: rotate(2deg) scalex(1.1);
+  -moz-transform: rotate(2deg) scalex(1.1);
+  -ms-transform: rotate(2deg) scalex(1.1);
+  -o-transform: rotate(2deg) scalex(1.1);
+}
+.portfolio .photo-container div:hover .caption {
+  bottom: 0;
+}
+.portfolio button {
+  display: block;
+  color: white;
+  background-color: var(--main-color);
+  padding: 15px 20px;
+  border: none;
+  margin: 30px auto;
+}
+.video {
+  margin-top: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.video video {
+  width: 100%;
+}
+.video .video-desc {
+  width: 100%;
+  background-color: var(--transparent-color);
+  position: absolute;
+  height: 245px;
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+}
+.video .video-desc h3 {
+  margin: 0 0 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.video .video-desc p {
+  margin-bottom: 30px;
+}
+.video .video-desc button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-transform: uppercase;
+}
+.video .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
 }
