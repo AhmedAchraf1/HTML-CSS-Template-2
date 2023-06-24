@@ -733,3 +733,255 @@ header nav form i {
   margin-bottom: 20px;
   display: block;
 }
+.pricing {
+  margin-top: 100px;
+}
+.pricing .container {
+  text-align: center;
+}
+.pricing .container:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+  .pricing .container:last-child .col {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 577px) {
+  .pricing .container:last-child .col {
+    flex-basis: 47%;
+  }
+}
+@media (min-width: 996px) {
+  .pricing .container:last-child .col {
+    flex-basis: calc(94% / 3);
+  }
+}
+@media (min-width: 1199px) {
+  .pricing .container:last-child .col {
+    flex-basis: 23%;
+  }
+}
+.pricing .container:last-child .col {
+  padding: 40px 0;
+  border-top: 1px solid var(--main-color);
+}
+.pricing .container:last-child .col .price h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.pricing .container:last-child .col .price {
+  margin-bottom: 40px;
+}
+.pricing .container:last-child .col .price span {
+  font-size: 60px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+.pricing .container:last-child .col .price span::before {
+  content: "$";
+  position: absolute;
+  width: 15px;
+  height: 34px;
+  left: -30px;
+  font-size: 25px;
+  font-weight: normal;
+}
+.pricing .container:last-child .col .price span::after {
+  content: "/MO";
+  position: absolute;
+  width: 40px;
+  height: 27px;
+  font-size: 18px;
+  bottom: 0;
+  right: -50px;
+}
+.pricing .container:last-child .col ul {
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  margin-bottom: 40px;
+}
+.pricing .container:last-child .col ul li {
+  padding: 25px;
+  display: block;
+  position: relative;
+}
+.pricing .container:last-child .col ul li:not(:last-child)::after {
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.pricing .container:last-child .col button {
+  width: 100px;
+  height: 60px;
+  background-color: white;
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.pricing .container:last-child .col button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.pricing-footer {
+  margin-top: 40px;
+}
+.pricing-footer .container {
+  text-align: center;
+}
+.pricing-footer .container p {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+.pricing-footer .container a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--main-color);
+  height: 50px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 45%;
+}
+.subscribe {
+  margin-top: 100px;
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  color: white;
+  padding: 140px 0;
+  position: relative;
+}
+.subscribe .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+.input-box {
+  height: 60px;
+  position: relative;
+  border: 1px solid white;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.input-box i {
+  padding: 0 20px;
+  border: none;
+}
+input[name="email"] {
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  margin-right: 80px;
+}
+input[name="email"] + label {
+  background-color: var(--main-color);
+  display: flex;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+input[name="email"]::placeholder {
+  color: white;
+}
+input[name="email"]:focus {
+  border: none;
+  caret-color: var(--main-color);
+}
+.subscribe .container p {
+  display: block;
+  position: absolute;
+  bottom: 90px;
+}
+.contact {
+  margin-top: 100px;
+}
+.contact .container {
+  text-align: center;
+}
+.contact .container:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .contact .container:last-child .info {
+    display: none;
+  }
+  .contact .container:last-child .form {
+    flex-basis: 100%;
+    order: 2;
+  }
+}
+@media (min-width: 769px) {
+  .contact .container:last-child .form {
+    flex-basis: 67%;
+  }
+  .contact .container:last-child .info {
+    flex-basis: 27%;
+  }
+}
+.contact .container:last-child .form {
+  padding: 30px;
+  position: relative;
+}
+.contact .container:last-child .form input,
+.contact .container:last-child .form textarea {
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 60px;
+  padding: 15px;
+}
+.contact .container:last-child .form textarea {
+  height: 300px;
+}
+.contact .container:last-child .form input[id="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  border: none;
+  display: flex;
+  margin-left: auto;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 150px;
+}
+.info {
+  position: relative;
+  padding-top: 30px;
+  text-align: start;
+}
+.info .address {
+  position: absolute;
+  left: 0;
+  top: 200px;
+}
+.info h3 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
