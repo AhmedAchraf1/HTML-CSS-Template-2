@@ -984,4 +984,54 @@ input[name="email"]:focus {
   font-weight: 500;
   font-size: 18px;
 }
-
+footer {
+  position: relative;
+  margin-top: 100px;
+  background-image: url("../images/subscribe.jpg");
+  background-size: cover;
+  padding: 200px 0;
+  color: white;
+}
+footer .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.587);
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+footer .container {
+  text-align: center;
+  position: absolute;
+  left: 5%;
+  top: 20%;
+}
+footer .container img {
+  display: inline-block;
+  margin-bottom: 50px;
+}
+footer .container h3 {
+  text-transform: uppercase;
+  padding: 20px;
+  border-bottom: 1px solid white;
+  font-size: 22px;
+  width: fit-content;
+  margin: 20px auto;
+}
+footer .container i{
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  transform: translateX(-10px);
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+}
+footer .copy{
+  font-size: 20px;
+}
+footer .copy span{
+  color: var(--main-color);
+  font-weight: 600;
+}
