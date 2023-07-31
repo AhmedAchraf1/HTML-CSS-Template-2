@@ -16,6 +16,7 @@ body {
   font-family: "Jomhuria", cursive;
   font-family: "Open Sans", sans-serif;
   font-family: "Work Sans", sans-serif;
+  overflow-x: hidden;
 }
 ul {
   list-style: none;
@@ -133,11 +134,39 @@ header nav form i {
 }
 .landing {
   height: 100vh;
-  background-image: url("../images/landing.jpg");
+  /* background-image: url("../images/leaf.jpg");
   background-size: cover;
+  background-position: center; */
   position: relative;
   display: flex;
   align-items: center;
+}
+.landing .images-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.landing .images-container img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.landing .images-container img {
+  left: -9999px;
+}
+.landing .images-container img:first-child {
+  left: 0;
+}
+.landing button {
+  cursor: pointer;
+}
+.landing button.disabled {
+  cursor: not-allowed;
 }
 .landing .overlay {
   width: 100%;
@@ -211,6 +240,7 @@ header nav form i {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border: 1px solid white;
+  cursor: pointer;
 }
 .points li.active {
   background-color: var(--main-color);
@@ -1018,7 +1048,7 @@ footer .container h3 {
   width: fit-content;
   margin: 20px auto;
 }
-footer .container i{
+footer .container i {
   font-size: 20px;
   margin-left: 20px;
   margin-bottom: 50px;
@@ -1028,10 +1058,10 @@ footer .container i{
   -ms-transform: translateX(-10px);
   -o-transform: translateX(-10px);
 }
-footer .copy{
+footer .copy {
   font-size: 20px;
 }
-footer .copy span{
+footer .copy span {
   color: var(--main-color);
   font-weight: 600;
 }
